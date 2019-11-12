@@ -1,0 +1,33 @@
+<div class="row bg-info">
+    <div class="col-2" style= "border-radius: 10px">
+
+    </div>
+    <div class="col-7 bg-dark">
+        <ul class="list-group m-3" *ngFor="let post of posts;">
+            <li
+                    [class.active]="isactive === post.id"
+                    class="list-group-item" (click)="handleClick(post.id)">
+                {{post.title}}
+            </li>
+            <li class="list-group-item">
+                {{post.body}}
+            </li>
+            <li class="list-group">
+                <div class="row">
+                    <div class="col-4" >
+                        <button class="btn btn-success m-1" style="width: 100%">Like</button>
+                    </div>
+                    <div class="col-4">
+                        <button class="btn btn-success m-1" style="width: 100%">Komantieren</button>
+                    </div>
+                    <div class="col-4" >
+                        <button class="btn btn-success m-1" style="width: 100%">Teilen</button>
+                    </div>
+                </div>
+            </li>
+        </ul>    </div>
+    <div class="col-3" style= "border-radius: 10px">
+    </div>
+
+</div>
+
